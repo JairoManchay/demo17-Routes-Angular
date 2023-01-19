@@ -1,0 +1,36 @@
+<section class="container mt-4">
+  <section class="row">
+    <article class="col">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>CÓDIGO</th>
+            <th>DESCRIPCION</th>
+            <th>PRECIO DE COMPRA</th>
+            <th>GANANCIA</th>
+            <th>EXISTENCIA</th>
+            <th>EDITAR</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of datos; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{item.codigo}}</td>
+            <td>{{item.descripcion}}</td>
+            <td>{{item.precioC}}</td>
+            <td>{{item.precioV}}</td>
+            <td>{{item.ganancia}}</td>
+            <td>{{item.existencia}}</td>
+            <td>
+              <a routerLink="/editar/{{ datos | json}}/{{item.codigo}}" class="btn btn-primary">EDITAR</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  </section>
+</section>
+
+

@@ -1,0 +1,44 @@
+<section class="container mt-4">
+  <section class="row">
+    <article class="col py-4">
+      <article class="text-center">
+        <h2>PRODUCTO NRO: {{cate}}</h2>
+      </article>
+
+      <article *ngFor="let item of info">
+
+        <section *ngIf="item.codigo==cate">
+
+          <section>
+            <label for="" class="form-label">Código de barras:</label>
+            <input type="number" class="form-control" value="{{item.codigo}}">
+          </section>
+
+          <section>
+            <label for="" class="form-label">Descripcion:</label>
+            <input type="text" class="form-control" value="{{item.descripcion}}">
+          </section>
+
+          <hr  style="border: 2px solid #17a2b8; width: 50%;">
+
+          <section>
+            <label for="" class="form-label">Precio de venta: </label>
+            <input type="text" class="form-control" value="{{item.precioV}}">
+          </section>
+
+          <section>
+            <label for="" class="form-label">Precio de compra: </label>
+            <input type="text" class="form-control" value="{{item.precioC}}">
+          </section>
+
+          <section>
+            <label for="" class="form-label">Existencia: </label>
+            <input type="text" class="form-control" value="{{item.existencia}}">
+          </section>
+
+        </section>
+
+      </article>
+    </article>
+  </section>
+</section>
